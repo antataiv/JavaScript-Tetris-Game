@@ -76,16 +76,16 @@ function TPiece() {
     this.state1 = [ [1, 1, 1],
                     [0, 1, 0]];
 
-    this.state2 = [ [1, 0],
+    this.state2 = [ [0, 1],
                     [1, 1],
-                    [1, 0]];
+                    [0, 1]];
 
     this.state3 = [ [0, 1, 0],
                     [1, 1, 1]];
 
-    this.state4 = [ [0, 1],
+    this.state4 = [ [1, 0],
                     [1, 1],
-                    [0, 1]];
+                    [1, 0]];
 
     this.states = [this.state1, this.state2, this.state3, this.state4];
     this.currentState = 0;

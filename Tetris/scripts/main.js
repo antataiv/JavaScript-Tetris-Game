@@ -1,6 +1,6 @@
 var totalRows = 20;
 var totalCols = 10;
-var size = 32;
+//var size = 32;
 
 var canvas,
     ctx,
@@ -32,7 +32,7 @@ function getReady() {
 
     prevTime = curTime = 0;
 
-    document.addEventListener('keydown', getInput);
+    document.addEventListener('keyArrows', getInput);
 
     initializeGame();
 }
@@ -195,11 +195,12 @@ function saveFallenPieceState(piece) {
 
 function checkIfLineIsFull() {
     var lineFound = 0;
-    var lineIsFull = true;
+
     var row = totalRows - 1;
     var col = totalCols - 1;
 
     while(row >= 0){
+        var lineIsFull = true;
         while(col >= 0) {
             //if we find one empty cell => line is not full
             //and break the inner while
