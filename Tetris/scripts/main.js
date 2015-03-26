@@ -32,7 +32,7 @@ function getReady() {
 
     prevTime = curTime = 0;
 
-    document.addEventListener('keyArrows', getInput);
+    document.addEventListener('keydown', getInput);
 
     initializeGame();
 }
@@ -62,8 +62,9 @@ function initializeGame() {
 
 function update() {
     curTime = new Date().getTime();
+    var speedControl = 500;
 
-    if(curTime - prevTime > 500) {
+    if(curTime - prevTime > speedControl) {
         //check if moving down is possible and if true --> move down
         if(isMovePossible(currentPiece, currentPiece.x, currentPiece.y + 1, currentPiece.currentState)) {
             currentPiece.y += 1;
