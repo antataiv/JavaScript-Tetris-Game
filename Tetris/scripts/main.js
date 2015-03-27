@@ -4,6 +4,7 @@ var totalCols = 10;
 
 var canvas,
     ctx,
+    startScreenImage,
     blockImage,
     backgroundImage,
     gameOverImage,
@@ -13,12 +14,18 @@ var canvas,
     curTime,
     isGameOver,
     lineSpan,
-    curLines;
+    curLines,
+    mouse,
+    currentScreen;
+
+
 
 window.onload = getReady();
 
 function getReady() {
     //load the images
+    startScreenImage = new Image();
+    startScreenImage.src = "images/startScreen.jpg"; //add the start screen image
     blockImage = new Image();
     blockImage.src = "images/blocks.png";
     backgroundImage = new Image();
@@ -26,8 +33,10 @@ function getReady() {
     gameOverImage = new Image();
     gameOverImage.src = "images/gameOver.png";
 
+
     canvas = document.getElementById('gameCanvas');
     ctx = canvas.getContext('2d');
+
     lineSpan = document.getElementById('lines');
 
     prevTime = curTime = 0;
@@ -258,3 +267,94 @@ function getInput(event) {
             break;
     }
 }
+
+
+//Start screen
+function beginLoop() {
+    var frameId = 0;
+    var lastFrame = Date.now();
+
+    function loop() {
+        var thisFrame = Date.now();
+
+        var elapsed = thisFrame - lastFrame;
+
+        frameId = window.requestAnimationFrame(loop);
+
+        currentScreen.update(elapsed);
+        currentScreen.draw(ctx);
+
+        lastFrame = thisFrame;
+
+    }
+
+    loop();
+}
+
+mouse = (function (target) {
+    var isButtonDown = false;
+
+    target.addEventListener('mousedown', function () {
+        isButtonDown = true;
+        getReady();
+    });
+    target.addEventListener('mouseup', function () {
+        isButtonDown = false;
+    });
+
+    return {
+        isButtonDown: function () {
+            return isButtonDown;
+        }
+    };
+}(document));
+
+currentScreen = (function (input) {
+
+    var hue = 0;
+    var direction = 1;
+    var transitioning = false;
+    var wasButtonDown = false;
+
+    function centerText(ctx, text, y) {
+        var measurement = ctx.measureText(text);
+        var x = (ctx.canvas.width - measurement.width) / 2;
+        ctx.fillText(text, x, y);
+    }
+
+    function draw(ctx) {
+
+        var y = ctx.canvas.height / 2;
+        var color = 'rgb(' + hue + ',140,10)';
+        ctx.drawImage(startScreenImage, 0, 0, 320, 640, 0, 0, 320, 640);
+
+        ctx.fillStyle = color;
+        ctx.font = 'bold 24px monospace';
+        centerText(ctx, 'click to start', y + 180);
+    }
+
+    function update() {
+
+        hue += direction;
+        if (hue > 255) direction = -1;
+        if (hue < 0) direction = 1;
+
+        var isButtonDown = input.isButtonDown();
+        var mouseJustClicked = !isButtonDown && wasButtonDown;
+
+        if (mouseJustClicked && !transitioning) {
+            transitioning = true;
+            currentScreen = mainGameScreen;
+            currentScreen.start();
+        }
+
+        wasButtonDown = isButtonDown;
+    }
+
+    return {
+        draw: draw,
+        update: update
+    };
+}(mouse));
+
+beginLoop();
