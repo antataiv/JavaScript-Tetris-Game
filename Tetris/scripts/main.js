@@ -221,11 +221,19 @@ function checkIfLineIsFull() {
             col--;
         }
 
+        //if we don't find an empty cell on the current row => it is full
         if(lineIsFull){
             lineFound++;
             curLines++;
-            gameMatrix.pop();
-            gameMatrix.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+
+            //delete the current row
+            deleteFullRow(row);
+
+            //increase row + 1 in order to stay on the same line ((because in the loop control we decrease it -1 by default))
+            //example full rows are 18 and 17, we delete row 18 and line 17 becomes 18
+            //for this reason we increase the current row with +1 (it becomes 19) and then decrease it by the loop control -1
+            //so we are still on line 18 and can check it once more for another full row
+            row++;
         }
         row--;
         col = totalCols - 1;
@@ -234,7 +242,35 @@ function checkIfLineIsFull() {
     lineSpan.innerHTML = curLines.toString();
 }
 
+//delete completed lines
+function deleteFullRow(currentRow) {
+    var row = currentRow;
+    var col = totalCols - 1;
+
+    //iterate through the whole game matrix and copy on the current row, the data from the row above (row - 1)
+    while(row >= 0) {
+        while(col >= 0) {
+            //check if row is not the 1st row (not on index 0) and copy the data from the row above (row - 1)
+            //this check is needed because if row is 0, then the previous row is -1 and we will get exception
+            if(row > 0){
+                gameMatrix[row][col] = gameMatrix[row -1][col];
+            }
+            else {
+                //if row is the 1st row of the game matrix (index 0), fill it with 0's
+                gameMatrix[row][col] = 0;
+            }
+            col--;
+        }
+        col = totalCols - 1;
+        row--;
+    }
+}
+
 function getInput(event) {
+    //disable possible scrolling on page using the arrow keys
+    event.preventDefault();
+
+    //check the key pressed and apply action
     switch (event.keyCode) {
         case 37:
             //move left
