@@ -101,6 +101,7 @@ function update() {
     if(!isGameOver) {
         window.requestAnimationFrame(update);
     } else {
+        //add startGame and move the image Game Over in the startScreen function ( function draw(ctx))
         startGame = false;
 
     }
