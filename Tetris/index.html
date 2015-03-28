@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="UTF-8" />
-        <title>Sample Tetris Game</title>
-        <link rel="stylesheet" href="css/style.css"/>
-    </head>
-    <body>
-        <div id="gameBoard">
-            <canvas id="gameCanvas" width="320" height="640"></canvas>
-        </div>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>Sample Tetris Game</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="gameBoard">
+    <canvas id="gameCanvas" width="320" height="640"></canvas>
+</div>
 
-        <div id="score">
-            <p>Lines: <span id="lines"></span></p>
-            <p>Level: <span id="level"></span></p>
-            <p>Score: <span id="gameScore"></span></p>
-        </div>
+<div id="score">
+    <p>Lines: <span id="lines"></span></p>
+    <p>Level: <span id="level"></span></p>
+    <p>Score: <span id="gameScore"></span></p>
+</div>
+<div id="instructions">
+    <h2>Game instructions</h2>
 
-        <script src="scripts/pieces.js"></script>
-        <script src="scripts/main.js"></script>
-    </body>
+    <p>Use the arrow keys to move and rotate the pieces, press down key for quick drop. </p>
+    <p>Left arrow - move left</p>
+    <p>Right arrow - move right</p>
+    <p>Up arrow - rotate piece</p>
+    <p>Down arrow - quick drop</p>
+</div>
+<script src="scripts/pieces.js"></script>
+<script src="scripts/main.js"></script>
+</body>
 </html>

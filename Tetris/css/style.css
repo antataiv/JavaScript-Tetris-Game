@@ -1,31 +1,53 @@
 body
 {
-	background-color:#000;
+    background-color:#000;
+    display: inline-block;
 }
 
 #gameBoard
 {
-	background-color:#8a8a8a;	
-	width:320px;
-	height:640px;
-	margin:0 auto;
-	border: 2px solid #6e6e7b;
+    display: inline-block;
+    background-color:#8a8a8a;
+    width:320px;
+    height:640px;
+    margin:0 auto;
+    border: 2px solid #6e6e7b;
 }
 
 #score
 {
-	font-size: 18pt;
-	font-family: sans-serif, verdana;
-	color: #fefefe;
-	width: 320px;
-	margin: 0 auto;
+    display: inline-block;
+    float: left;
+    font-size: 18pt;
+    font-family: sans-serif, verdana;
+    color: #fefefe;
+    width: 160px;
+    margin: 50px 0 0 260px;
+    padding: 0 0 0 63px;
 }
 
 p
 {
-	font-size: 14pt;
-	font-family: sans-serif, verdana;
-	color: #fefefe;
-	width: 320px;
-	margin: 0 auto;
+    line-height: 80px;
+    font-size: 14pt;
+    font-family: sans-serif, verdana;
+    color: #fefefe;
+    width: 320px;
+    margin: 0 auto;
+}
+#instructions{
+    text-align: center;
+    vertical-align: top;
+    margin-left: 30px;
+    margin-top: 50px;
+    color: white;
+    display: inline-block;
+    width: 320px;
+}
+#instructions p{
+    line-height: 30px;
+}
+#instructions > p:nth-child(2){
+    margin-bottom: 50px;
+    font-style: italic;
 }
