@@ -380,8 +380,6 @@ currentScreen = (function (input) {
 
         if (mouseJustClicked && !transitioning) {
             transitioning = true;
-            currentScreen = mainGameScreen;
-            currentScreen.start();
         }
 
         wasButtonDown = isButtonDown;
