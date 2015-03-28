@@ -16,11 +16,13 @@ var canvas,
     lineSpan,
     curLines,
     mouse,
-    currentScreen;
+    currentScreen,
+    startGame;
 
 
 
 window.onload = getReady();
+
 
 function getReady() {
     //load the images
@@ -71,6 +73,8 @@ function initializeGame() {
 
 function update() {
     curTime = new Date().getTime();
+
+
     var speedControl = 500;
 
     if(curTime - prevTime > speedControl) {
@@ -97,7 +101,9 @@ function update() {
     if(!isGameOver) {
         window.requestAnimationFrame(update);
     } else {
-        ctx.drawImage(gameOverImage, 0, 0, 320, 640, 0, 0, 320, 640);
+        //add startGame and move the image Game Over in the startScreen function ( function draw(ctx))
+        startGame = false;
+
     }
 }
 
@@ -304,91 +310,106 @@ function getInput(event) {
     }
 }
 
+startGame = true;
+
+startScreen();
+
 
 //Start screen
-function beginLoop() {
-    var frameId = 0;
-    var lastFrame = Date.now();
 
-    function loop() {
-        var thisFrame = Date.now();
+function startScreen () {
 
-        var elapsed = thisFrame - lastFrame;
+    function beginLoop() {
+        var frameId = 0;
+        var lastFrame = Date.now();
 
-        frameId = window.requestAnimationFrame(loop);
+        function loop() {
+            var thisFrame = Date.now();
 
-        currentScreen.update(elapsed);
-        currentScreen.draw(ctx);
+            var elapsed = thisFrame - lastFrame;
 
-        lastFrame = thisFrame;
+            frameId = window.requestAnimationFrame(loop);
 
+            currentScreen.update(elapsed);
+            currentScreen.draw(ctx);
+            lastFrame = thisFrame;
+
+        }
+
+        loop();
     }
 
-    loop();
+    mouse = (function (target) {
+        var isButtonDown = false;
+
+        target.addEventListener('mousedown', function () {
+            isButtonDown = true;
+
+        });
+        target.addEventListener('mouseup', function () {
+            isButtonDown = false;
+        });
+
+        return {
+            isButtonDown: function () {
+                return isButtonDown;
+            }
+        };
+    }(document));
+
+    currentScreen = (function (input) {
+
+        var hue = 0;
+        var direction = 1;
+        var transitioning = false;
+        var wasButtonDown = false;
+
+        function centerText(ctx, text, y) {
+            var measurement = ctx.measureText(text);
+            var x = (ctx.canvas.width - measurement.width) / 2;
+            ctx.fillText(text, x, y);
+        }
+
+        function draw(ctx) {
+
+
+            if(startGame) {
+                var y = ctx.canvas.height / 2;
+                var color = 'rgb(' + hue + ',140,10)';
+                ctx.drawImage(startScreenImage, 0, 0, 320, 640, 0, 0, 320, 640);
+
+                ctx.fillStyle = color;
+                ctx.font = 'bold 24px monospace';
+                centerText(ctx, 'click to start', y + 180);
+            } else {
+                ctx.drawImage(gameOverImage, 0, 0, 320, 640, 0, 0, 320, 640);
+            }
+
+        }
+
+        function update() {
+
+            hue += direction;
+            if (hue > 255) direction = -1;
+            if (hue < 0) direction = 1;
+
+            var isButtonDown = input.isButtonDown();
+            var mouseJustClicked = !isButtonDown && wasButtonDown;
+
+            if (mouseJustClicked && !transitioning) {
+                transitioning = true;
+                getReady();
+            }
+
+            wasButtonDown = isButtonDown;
+        }
+
+        return {
+            draw: draw,
+            update: update
+        };
+    }(mouse));
+
+    beginLoop();
+
 }
-
-mouse = (function (target) {
-    var isButtonDown = false;
-
-    target.addEventListener('mousedown', function () {
-        isButtonDown = true;
-        getReady();
-    });
-    target.addEventListener('mouseup', function () {
-        isButtonDown = false;
-    });
-
-    return {
-        isButtonDown: function () {
-            return isButtonDown;
-        }
-    };
-}(document));
-
-currentScreen = (function (input) {
-
-    var hue = 0;
-    var direction = 1;
-    var transitioning = false;
-    var wasButtonDown = false;
-
-    function centerText(ctx, text, y) {
-        var measurement = ctx.measureText(text);
-        var x = (ctx.canvas.width - measurement.width) / 2;
-        ctx.fillText(text, x, y);
-    }
-
-    function draw(ctx) {
-
-        var y = ctx.canvas.height / 2;
-        var color = 'rgb(' + hue + ',140,10)';
-        ctx.drawImage(startScreenImage, 0, 0, 320, 640, 0, 0, 320, 640);
-
-        ctx.fillStyle = color;
-        ctx.font = 'bold 24px monospace';
-        centerText(ctx, 'click to start', y + 180);
-    }
-
-    function update() {
-
-        hue += direction;
-        if (hue > 255) direction = -1;
-        if (hue < 0) direction = 1;
-
-        var isButtonDown = input.isButtonDown();
-        var mouseJustClicked = !isButtonDown && wasButtonDown;
-
-        if (mouseJustClicked && !transitioning) {
-            transitioning = true;
-        }
-
-        wasButtonDown = isButtonDown;
-    }
-
-    return {
-        draw: draw,
-        update: update
-    };
-}(mouse));
-
-beginLoop();
