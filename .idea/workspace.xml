@@ -27,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tetris/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="525">
+            <state vertical-scroll-proportion="0.8146067" vertical-offset="0" max-vertical-offset="534">
               <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tetris/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34749034" vertical-offset="2205" max-vertical-offset="3315">
-              <caret line="254" column="35" selection-start-line="254" selection-start-column="35" selection-end-line="254" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2216" max-vertical-offset="3315">
+              <caret line="272" column="34" selection-start-line="272" selection-start-column="26" selection-end-line="272" selection-end-column="34" />
               <folding>
                 <element signature="n#!!block;n#drawBoard#0" expanded="false" />
                 <element signature="n#!!block;n#drawPiece#0" expanded="false" />
@@ -50,9 +50,9 @@
                 <element signature="n#!!block;n#getInput#0" expanded="false" />
                 <element signature="n#!!block;n#startScreen#0" expanded="false" />
                 <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
-                <element signature="e#10750#11120#0" expanded="false" />
-                <element signature="e#11172#12652#0" expanded="false" />
-                <element signature="e#12047#12566#0" expanded="false" />
+                <element signature="e#10764#11134#0" expanded="false" />
+                <element signature="e#11186#12666#0" expanded="false" />
+                <element signature="e#12061#12580#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -270,9 +270,9 @@
             <element signature="n#!!block;n#getInput#0" expanded="false" />
             <element signature="n#!!block;n#startScreen#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
-            <element signature="e#10750#11120#0" expanded="false" />
-            <element signature="e#11172#12652#0" expanded="false" />
-            <element signature="e#12047#12566#0" expanded="false" />
+            <element signature="e#10764#11134#0" expanded="false" />
+            <element signature="e#11186#12666#0" expanded="false" />
+            <element signature="e#12061#12580#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -305,9 +305,9 @@
             <element signature="n#!!block;n#getInput#0" expanded="false" />
             <element signature="n#!!block;n#startScreen#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
-            <element signature="e#10750#11120#0" expanded="false" />
-            <element signature="e#11172#12652#0" expanded="false" />
-            <element signature="e#12047#12566#0" expanded="false" />
+            <element signature="e#10764#11134#0" expanded="false" />
+            <element signature="e#11186#12666#0" expanded="false" />
+            <element signature="e#12061#12580#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -340,9 +340,9 @@
             <element signature="n#!!block;n#getInput#0" expanded="false" />
             <element signature="n#!!block;n#startScreen#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
-            <element signature="e#10750#11120#0" expanded="false" />
-            <element signature="e#11172#12652#0" expanded="false" />
-            <element signature="e#12047#12566#0" expanded="false" />
+            <element signature="e#10764#11134#0" expanded="false" />
+            <element signature="e#11186#12666#0" expanded="false" />
+            <element signature="e#12061#12580#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -363,18 +363,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tetris/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="525">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tetris/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34749034" vertical-offset="2205" max-vertical-offset="3315">
-          <caret line="254" column="35" selection-start-line="254" selection-start-column="35" selection-end-line="254" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2216" max-vertical-offset="3315">
+          <caret line="272" column="34" selection-start-line="272" selection-start-column="26" selection-end-line="272" selection-end-column="34" />
           <folding>
             <element signature="n#!!block;n#drawBoard#0" expanded="false" />
             <element signature="n#!!block;n#drawPiece#0" expanded="false" />
@@ -383,10 +375,18 @@
             <element signature="n#!!block;n#getInput#0" expanded="false" />
             <element signature="n#!!block;n#startScreen#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
-            <element signature="e#10750#11120#0" expanded="false" />
-            <element signature="e#11172#12652#0" expanded="false" />
-            <element signature="e#12047#12566#0" expanded="false" />
+            <element signature="e#10764#11134#0" expanded="false" />
+            <element signature="e#11186#12666#0" expanded="false" />
+            <element signature="e#12061#12580#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tetris/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8146067" vertical-offset="0" max-vertical-offset="534">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

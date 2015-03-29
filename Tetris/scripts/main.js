@@ -245,7 +245,7 @@ function checkIfLineIsFull() {
             curScore+=20;
 
             //change level and speed
-            if (curLines >= 3){
+            if (curLines >= 3 && curLines<5){
                 curLevel = 2;
                 speedControl = 300;
             }
