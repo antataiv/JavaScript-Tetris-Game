@@ -229,7 +229,7 @@ function checkIfLineIsFull() {
                 col = -1;
             }
             col--;
-            
+
         }
 
         //if we don't find an empty cell on the current row => it is full
