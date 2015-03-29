@@ -17,7 +17,10 @@ var canvas,
     curLines,
     mouse,
     currentScreen,
-    startGame;
+    startGame,
+    startSound,
+    gameOverSound,
+    brickDrop;
 
 
 
@@ -101,9 +104,9 @@ function update() {
     if(!isGameOver) {
         window.requestAnimationFrame(update);
     } else {
-        //add startGame and move the image Game Over in the startScreen function ( function draw(ctx))
         startGame = false;
-
+        gameOverSound = new Audio('sounds/game-over.wav');
+        gameOverSound.play();
     }
 }
 
@@ -200,6 +203,7 @@ function saveFallenPieceState(piece) {
     }
 
     //write function to check for full lines and remove them
+
     checkIfLineIsFull();
 
     //check if the y coordinate of the current piece is 0
@@ -225,6 +229,7 @@ function checkIfLineIsFull() {
                 col = -1;
             }
             col--;
+            
         }
 
         //if we don't find an empty cell on the current row => it is full
@@ -399,6 +404,8 @@ function startScreen () {
             if (mouseJustClicked && !transitioning) {
                 transitioning = true;
                 getReady();
+                startSound = new Audio('sounds/start.wav');
+                startSound.play();
             }
 
             wasButtonDown = isButtonDown;
