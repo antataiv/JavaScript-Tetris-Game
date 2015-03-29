@@ -1,6 +1,9 @@
 var totalRows = 20;
 var totalCols = 10;
 //var size = 32;
+var curLevel = 1;
+var curScore = 0;
+var speedControl = 500;
 
 var canvas,
     ctx,
@@ -24,6 +27,7 @@ var canvas,
 
 
 
+
 window.onload = getReady();
 
 
@@ -42,7 +46,9 @@ function getReady() {
     canvas = document.getElementById('gameCanvas');
     ctx = canvas.getContext('2d');
 
+    scoreSpan = document.getElementById('gameScore');
     lineSpan = document.getElementById('lines');
+    levelSpan = document.getElementById('level');
 
     prevTime = curTime = 0;
 
@@ -70,7 +76,8 @@ function initializeGame() {
 
     //update Line counter on canvas
     lineSpan.innerHTML = curLines.toString();
-
+    scoreSpan.innerHTML = curScore.toString();
+    levelSpan.innerHTML = curLevel.toString();
     window.requestAnimationFrame(update);
 }
 
@@ -78,7 +85,6 @@ function update() {
     curTime = new Date().getTime();
 
 
-    var speedControl = 500;
 
     if(curTime - prevTime > speedControl) {
         //check if moving down is possible and if true --> move down
@@ -236,6 +242,18 @@ function checkIfLineIsFull() {
         if(lineIsFull){
             lineFound++;
             curLines++;
+            curScore+=20;
+
+            //change level and speed
+            if (curLines >= 3){
+                curLevel = 2;
+                speedControl = 300;
+            }
+
+            if (curLines >= 5){
+                curLevel = 3;
+                speedControl = 100;
+            }
 
             //delete the current row
             deleteFullRow(row);
@@ -251,6 +269,9 @@ function checkIfLineIsFull() {
     }
 
     lineSpan.innerHTML = curLines.toString();
+    scoreSpan.innerHTML = curScore.toString();
+    levelSpan.innerHTML = curLevel.toString();
+
 }
 
 //delete completed lines
