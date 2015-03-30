@@ -57,15 +57,12 @@ function BlockPiece() {
 }
 
 function LinePiece() {
-    this.state1 = [ [0, 1, 0, 0],
-                    [0, 1, 0, 0],
-                    [0, 1, 0, 0],
-                    [0, 1, 0, 0]];
+    this.state1 = [ [1],
+                    [1],
+                    [1],
+                    [1]];
 
-    this.state2 = [ [0, 0, 0, 0],
-					[1, 1, 1, 1],
-					[0, 0, 0, 0],
-					[0, 0, 0, 0]];
+    this.state2 = [ [1, 1, 1, 1] ];
 
     this.states = [this.state1, this.state2];
     this.currentState = 0;

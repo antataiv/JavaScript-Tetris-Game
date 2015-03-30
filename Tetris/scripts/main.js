@@ -127,6 +127,7 @@ function update() {
         curLevel = 1;
         curLines = 0;
         curScore = 0;
+        speedControl = 500;
         gameOverSound.play();
     }
 }
