@@ -23,7 +23,9 @@ var canvas,
     startGame,
     startSound,
     gameOverSound,
-    brickDrop;
+    brickDrop,
+    lineDown,
+    newLevelSound;
 
 
 
@@ -93,6 +95,8 @@ function update() {
         } else {
             //if moving down is no longer possible, then end of the canvas is reached
             //save the state of the current piece on the game matrix and generate a new piece
+            brickDrop = new Audio ('sounds/piece-fall.wav');
+            brickDrop.play();
             saveFallenPieceState(currentPiece);
             currentPiece = getRandomPiece();
         }
@@ -240,17 +244,23 @@ function checkIfLineIsFull() {
 
         //if we don't find an empty cell on the current row => it is full
         if(lineIsFull){
+            lineDown = new Audio('sounds/line-down.wav');
+            lineDown.play();
             lineFound++;
             curLines++;
             curScore+=20;
 
             //change level and speed
             if (curLines >= 3 && curLines<5){
+                newLevelSound = new Audio('sounds/new-level.wav');
+                newLevelSound.play();
                 curLevel = 2;
                 speedControl = 300;
             }
 
             if (curLines >= 5){
+                newLevelSound = new Audio('sounds/new-level-1.wav');
+                newLevelSound.play();
                 curLevel = 3;
                 speedControl = 100;
             }
@@ -425,7 +435,7 @@ function startScreen () {
             if (mouseJustClicked && !transitioning) {
                 transitioning = true;
                 getReady();
-                startSound = new Audio('sounds/start.wav');
+                startSound = new Audio('sounds/start-game.wav');
                 startSound.play();
             }
 
