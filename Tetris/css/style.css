@@ -1,53 +1,88 @@
-body
-{
-    background-color:#000;
-    display: inline-block;
+@font-face {
+    font-family: 'Xolonium';
+    src: url('../fonts/Xolonium-Bold.otf');
 }
 
-#gameBoard
-{
-    display: inline-block;
-    background-color:#8a8a8a;
-    width:320px;
-    height:640px;
-    margin:0 auto;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background: url('../images/blue-bg.png');
+    background-size: cover;
+
+}
+
+#wrapper {
+    margin: 30px auto;
+    padding: 0;
+    width: 700px;
+    height: 655px;
+    /*background-color: indianred;*/
+    justify-content: center;
+    align-content: center;
+}
+
+main {
+    display: flex;
+}
+
+header{
+    font-family: Xolonium ,sans-serif;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+#gameBoard {
+    background-color: #8a8a8a;
+    width: 320px;
+    height: 640px;
+    margin: auto;
+    padding: 0;
     border: 2px solid #6e6e7b;
 }
 
-#score
-{
+#sideBar {
     display: inline-block;
-    float: left;
-    font-size: 18pt;
-    font-family: sans-serif, verdana;
+    font-size: 10pt;
+    font-family: 'Xolonium' , sans-serif;
     color: #fefefe;
-    width: 160px;
-    margin: 50px 0 0 260px;
-    padding: 0 0 0 63px;
+    width: 276px;
+    height: 640px;
+
 }
 
-p
-{
-    line-height: 80px;
-    font-size: 14pt;
-    font-family: sans-serif, verdana;
-    color: #fefefe;
-    width: 320px;
-    margin: 0 auto;
-}
-#instructions{
+article {
+    border: 2px solid #6e6e7b;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15%;
     text-align: center;
     vertical-align: top;
-    margin-left: 30px;
-    margin-top: 50px;
+}
+
+#scoreBoard {
+
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    height: 35%;
+    text-align: center;
+}
+
+p {
+    color: #fefefe;
+}
+
+#instructions {
+    font-size: 1.2em;;
+    text-align: center;
+    vertical-align: middle;
     color: white;
-    display: inline-block;
-    width: 320px;
+    height: 50%;
 }
-#instructions p{
-    line-height: 30px;
-}
-#instructions > p:nth-child(2){
-    margin-bottom: 50px;
-    font-style: italic;
-}
+
+
+
+
+

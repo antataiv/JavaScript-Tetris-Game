@@ -57,12 +57,15 @@ function BlockPiece() {
 }
 
 function LinePiece() {
-    this.state1 = [ [1],
-                    [1],
-                    [1],
-                    [1]];
+    this.state1 = [ [0, 1, 0, 0],
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 0]];
 
-    this.state2 = [ [1, 1, 1, 1]];
+    this.state2 = [ [0, 0, 0, 0],
+					[1, 1, 1, 1],
+					[0, 0, 0, 0],
+					[0, 0, 0, 0]];
 
     this.states = [this.state1, this.state2];
     this.currentState = 0;
@@ -127,8 +130,32 @@ function ReverseZPiece() {
     this.y = 0;
 }
 
+function PlusPiece() {
+    this.state1 = [ [0, 1, 0],
+                    [1, 1, 1],
+					[0, 1, 0]];
+
+    this.states = [this.state1];
+    this.currentState = 0;
+    this.colorIndex = 7;
+    //top left coordinates of piece
+    this.x = 3;
+    this.y = 0;
+}
+
+function SinglePiece() {
+    this.state1 = [ [ 1] ];
+
+    this.states = [this.state1];
+    this.currentState = 0;
+    this.colorIndex = 7;
+    //top left coordinates of piece
+    this.x = 3;
+    this.y = 0;
+}
+
 function getRandomPiece() {
-    var result = Math.floor(Math.random() * 7);
+    var result = Math.floor(Math.random() * 9);
     var piece;
 
     switch (result) {
@@ -146,6 +173,10 @@ function getRandomPiece() {
             break;
         case 6: piece = new LinePiece();
             break;
+		case 7: piece = new PlusPiece();
+			break;
+		case 8: piece = new SinglePiece();
+			break;
     }
     //piece.color = Math.floor(Math.random() * 8);
 

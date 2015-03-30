@@ -1,6 +1,5 @@
 var totalRows = 20;
 var totalCols = 10;
-//var size = 32;
 var curLevel = 1;
 var curScore = 0;
 var speedControl = 500;
@@ -25,7 +24,8 @@ var canvas,
     gameOverSound,
     brickDrop,
     lineDown,
-    newLevelSound;
+    newLevelSound,
+	canvasBackgroundImages = [];
 
 
 
@@ -39,11 +39,16 @@ function getReady() {
     startScreenImage.src = "images/startScreen.jpg"; //add the start screen image
     blockImage = new Image();
     blockImage.src = "images/blocks.png";
-    backgroundImage = new Image();
-    backgroundImage.src = "images/background.png";
+	//backgroundImage.src = "images/background.png";
     gameOverImage = new Image();
     gameOverImage.src = "images/gameOver.png";
 
+	canvasBackgroundImages[0] = new Image();
+    canvasBackgroundImages[0].src = "images/background.png";
+    canvasBackgroundImages[1] = new Image();
+    canvasBackgroundImages[1].src = "images/canvas-bg.jpg";
+    canvasBackgroundImages[2] = new Image();
+    canvasBackgroundImages[2].src = "images/canvas-bg.jpg";
 
     canvas = document.getElementById('gameCanvas');
     ctx = canvas.getContext('2d');
@@ -121,8 +126,15 @@ function update() {
 }
 
 function drawBoard() {
-    //draw background
-    ctx.drawImage(backgroundImage, 0, 0, 320, 640, 0, 0, 320, 640);
+   //draw canvas background
+    switch (curLevel){
+        case 1: ctx.drawImage(canvasBackgroundImages[0], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 2: ctx.drawImage(canvasBackgroundImages[1], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 3: ctx.drawImage(canvasBackgroundImages[2], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+    }
 
     //redraw the already saved previous state of the game matrix
     for (var row = 0; row < totalRows; row++) {
