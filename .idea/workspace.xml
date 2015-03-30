@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="335bc579-9a32-4cec-ad9b-ff7f6a87ec82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tetris/images/canvas-bg-3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tetris/index.html" afterPath="$PROJECT_DIR$/Tetris/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tetris/scripts/main.js" afterPath="$PROJECT_DIR$/Tetris/scripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tetris/scripts/pieces.js" afterPath="$PROJECT_DIR$/Tetris/scripts/pieces.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\TEAM-LINNAEUS\Tetris\images\background.png" afterPath="$PROJECT_DIR$/Tetris/images/canvas-bg-1.png" />
-      <change type="MOVED" beforePath="D:\TEAM-LINNAEUS\Tetris\images\canvas-bg.jpg" afterPath="$PROJECT_DIR$/Tetris/images/canvas-bg-2.jpg" />
     </list>
     <ignored path="TEAM-LINNAEUS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tetris/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.576923" vertical-offset="83" max-vertical-offset="952">
+            <state vertical-scroll-proportion="-2.6923077" vertical-offset="236" max-vertical-offset="952">
               <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
@@ -45,13 +39,10 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tetris/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.1148326" vertical-offset="2686" max-vertical-offset="4981">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.19476268" vertical-offset="612" max-vertical-offset="7208">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#update#0" expanded="false" />
                 <element signature="n#!!block;n#isMovePossible#0" expanded="false" />
-                <element signature="n#!!block;n#saveFallenPieceState#0" expanded="false" />
-                <element signature="n#!!block;n#checkIfLineIsFull#0" expanded="false" />
                 <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
               </folding>
             </state>
@@ -210,7 +201,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -218,7 +209,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -231,6 +222,26 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -253,7 +264,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Tetris/scripts/main.js</url>
-          <line>124</line>
+          <line>133</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -275,10 +286,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2890" max-vertical-offset="4012">
           <caret line="272" column="31" selection-start-line="272" selection-start-column="26" selection-end-line="272" selection-end-column="31" />
           <folding>
-            <element signature="n#!!block;n#update#0" expanded="false" />
             <element signature="n#!!block;n#isMovePossible#0" expanded="false" />
-            <element signature="n#!!block;n#saveFallenPieceState#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfLineIsFull#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
           </folding>
         </state>
@@ -305,10 +313,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5085">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#update#0" expanded="false" />
             <element signature="n#!!block;n#isMovePossible#0" expanded="false" />
-            <element signature="n#!!block;n#saveFallenPieceState#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfLineIsFull#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
           </folding>
         </state>
@@ -335,10 +340,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1000" max-vertical-offset="1770">
           <caret line="242" column="4" selection-start-line="242" selection-start-column="4" selection-end-line="242" selection-end-column="4" />
           <folding>
-            <element signature="n#!!block;n#update#0" expanded="false" />
             <element signature="n#!!block;n#isMovePossible#0" expanded="false" />
-            <element signature="n#!!block;n#saveFallenPieceState#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfLineIsFull#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
           </folding>
         </state>
@@ -365,10 +367,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#update#0" expanded="false" />
             <element signature="n#!!block;n#isMovePossible#0" expanded="false" />
-            <element signature="n#!!block;n#saveFallenPieceState#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfLineIsFull#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
           </folding>
         </state>
@@ -410,7 +409,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tetris/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.576923" vertical-offset="83" max-vertical-offset="952">
+        <state vertical-scroll-proportion="-2.6923077" vertical-offset="236" max-vertical-offset="952">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
@@ -418,13 +417,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tetris/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1148326" vertical-offset="2686" max-vertical-offset="4981">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.19476268" vertical-offset="612" max-vertical-offset="7208">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#update#0" expanded="false" />
             <element signature="n#!!block;n#isMovePossible#0" expanded="false" />
-            <element signature="n#!!block;n#saveFallenPieceState#0" expanded="false" />
-            <element signature="n#!!block;n#checkIfLineIsFull#0" expanded="false" />
             <element signature="n#!!block;n#beginLoop#0;n#!!block;n#startScreen#0" expanded="false" />
           </folding>
         </state>

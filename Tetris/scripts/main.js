@@ -28,7 +28,6 @@ var canvas,
 
 
 
-
     window.onload = getReady();
 
 
@@ -64,7 +63,9 @@ function getReady() {
 
 function initializeGame() {
     var row, col;
+    curLevel = 1;
     curLines = 0;
+    curScore = 0;
     isGameOver = false;
 
     //create the gameMatrix as array[gameRow][gameCol] of 0's
@@ -81,6 +82,10 @@ function initializeGame() {
 
     startSound = new Audio('sounds/start-game.wav');
     startSound.play();
+
+    lineSpan.innerHTML = curLines.toString();
+    scoreSpan.innerHTML = curScore.toString();
+    levelSpan.innerHTML = curLevel.toString();
 
     window.requestAnimationFrame(update);
 }
@@ -118,6 +123,10 @@ function update() {
     } else {
         startGame = false;
         gameOverSound = new Audio('sounds/game-over.wav');
+        //reset counters for new game
+        curLevel = 1;
+        curLines = 0;
+        curScore = 0;
         gameOverSound.play();
     }
 }
@@ -427,6 +436,7 @@ function startScreen () {
                 ctx.font = 'bold 24px monospace';
                 centerText(ctx, 'click to start', y + 180);
             } else {
+
                 ctx.drawImage(gameOverImage, 0, 0, 320, 640, 0, 0, 320, 640);
             }
 
