@@ -10,34 +10,38 @@
 <div id="wrapper">
     <header><h1>Team Linnaeus</h1></header>
     <main>
-    <section id="gameBoard">
-        <canvas id="gameCanvas" width="320" height="640"></canvas>
-    </section>
+        <section id="gameBoard">
+            <canvas id="gameCanvas" width="320" height="640"></canvas>
+        </section>
 
+        <section id="sideBar">
 
-    <section id="sideBar">
-        <article id="scoreBoard">
-            <p>Lines: <span id="lines"></span></p>
+            <article>
+                <button onclick="initializeGame()">Play</button>
+            </article>
 
-            <p>Level: <span id="level"></span></p>
+            <article id="scoreBoard">
+                <p>Lines: <span id="lines">0</span></p>
 
-            <p>Score: <span id="gameScore"></span></p>
-        </article>
+                <p>Level: <span id="level">1</span></p>
 
-        <article id="instructions">
-            <h3>Game instructions</h3>
+                <p>Score: <span id="gameScore">0</span></p>
+            </article>
 
-            <p>Use the arrow keys to move and rotate the pieces, press down key for quick drop. </p>
+            <article id="instructions">
+                <h3>Game instructions</h3>
 
-            <p>Left arrow - move left</p>
+                <p>Use the arrow keys to move and rotate the pieces, press down key for quick drop. </p>
 
-            <p>Right arrow - move right</p>
+                <p>Left arrow - move left</p>
 
-            <p>Up arrow - rotate piece</p>
+                <p>Right arrow - move right</p>
 
-            <p>Down arrow - quick drop</p>
-        </article>
-    </section>
+                <p>Up arrow - rotate piece</p>
+
+                <p>Down arrow - quick drop</p>
+            </article>
+        </section>
     </main>
 </div>
 

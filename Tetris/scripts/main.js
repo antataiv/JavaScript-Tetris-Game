@@ -8,7 +8,6 @@ var canvas,
     ctx,
     startScreenImage,
     blockImage,
-    backgroundImage,
     gameOverImage,
     currentPiece,
     gameMatrix,
@@ -30,7 +29,7 @@ var canvas,
 
 
 
-window.onload = getReady();
+    window.onload = getReady();
 
 
 function getReady() {
@@ -39,16 +38,15 @@ function getReady() {
     startScreenImage.src = "images/startScreen.jpg"; //add the start screen image
     blockImage = new Image();
     blockImage.src = "images/blocks.png";
-	//backgroundImage.src = "images/background.png";
     gameOverImage = new Image();
     gameOverImage.src = "images/gameOver.png";
 
 	canvasBackgroundImages[0] = new Image();
-    canvasBackgroundImages[0].src = "images/background.png";
+    canvasBackgroundImages[0].src = "images/canvas-bg-1.png";
     canvasBackgroundImages[1] = new Image();
-    canvasBackgroundImages[1].src = "images/canvas-bg.jpg";
+    canvasBackgroundImages[1].src = "images/canvas-bg-2.jpg";
     canvasBackgroundImages[2] = new Image();
-    canvasBackgroundImages[2].src = "images/canvas-bg.jpg";
+    canvasBackgroundImages[2].src = "images/canvas-bg-3.jpg";
 
     canvas = document.getElementById('gameCanvas');
     ctx = canvas.getContext('2d');
@@ -81,10 +79,9 @@ function initializeGame() {
     //generate random new Piece
     currentPiece = getRandomPiece();
 
-    //update Line counter on canvas
-    lineSpan.innerHTML = curLines.toString();
-    scoreSpan.innerHTML = curScore.toString();
-    levelSpan.innerHTML = curLevel.toString();
+    startSound = new Audio('sounds/start-game.wav');
+    startSound.play();
+
     window.requestAnimationFrame(update);
 }
 

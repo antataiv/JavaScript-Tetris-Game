@@ -137,7 +137,7 @@ function PlusPiece() {
 
     this.states = [this.state1];
     this.currentState = 0;
-    this.colorIndex = 7;
+    this.colorIndex = 1;
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
@@ -148,7 +148,7 @@ function SinglePiece() {
 
     this.states = [this.state1];
     this.currentState = 0;
-    this.colorIndex = 7;
+    this.colorIndex = 2;
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
