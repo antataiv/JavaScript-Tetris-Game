@@ -8,7 +8,11 @@
 <body>
 
 <div id="wrapper">
-    <header><h1>Team Linnaeus</h1></header>
+    <header>
+        <h1>Team Linnaeus</h1>
+        <hr/>
+    </header>
+
     <main>
         <section id="gameBoard">
             <canvas id="gameCanvas" width="320" height="640"></canvas>
@@ -16,22 +20,22 @@
 
         <section id="sideBar">
 
-            <article>
-                <button onclick="initializeGame()">Play</button>
-            </article>
+            <button onclick="initializeGame()">Play</button>
 
             <article id="scoreBoard">
                 <p>Lines: <span id="lines">0</span></p>
-
+                <hr/>
                 <p>Level: <span id="level">1</span></p>
-
+                <hr/>
                 <p>Score: <span id="gameScore">0</span></p>
             </article>
 
             <article id="instructions">
-                <h3>Game instructions</h3>
 
-                <p>Use the arrow keys to move and rotate the pieces, press down key for quick drop. </p>
+                <h2>Game instructions</h2>
+                <hr/>
+
+                <p>Use the arrow keys to move and rotate the pieces, press down key for quick drop.</p>
 
                 <p>Left arrow - move left</p>
 
