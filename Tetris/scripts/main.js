@@ -15,6 +15,8 @@ var canvas,
     curTime,
     isGameOver,
     lineSpan,
+    scoreSpan,
+    levelSpan,
     curLines,
     mouse,
     currentScreen,
@@ -25,8 +27,6 @@ var canvas,
     lineDown,
     newLevelSound,
 	canvasBackgroundImages = [];
-
-
 
     window.onload = getReady();
 
@@ -58,7 +58,7 @@ function getReady() {
 
     document.addEventListener('keydown', getInput);
 
-    initializeGame();
+    //initializeGame();
 }
 
 function initializeGame() {
@@ -92,8 +92,6 @@ function initializeGame() {
 
 function update() {
     curTime = new Date().getTime();
-
-
 
     if(curTime - prevTime > speedControl) {
         //check if moving down is possible and if true --> move down
@@ -231,8 +229,7 @@ function saveFallenPieceState(piece) {
         yPos += 1;
     }
 
-    //write function to check for full lines and remove them
-
+    //check for full lines and remove them
     checkIfLineIsFull();
 
     //check if the y coordinate of the current piece is 0
@@ -454,7 +451,7 @@ function startScreen () {
 
             if (mouseJustClicked && !transitioning) {
                 transitioning = true;
-                getReady();
+                initializeGame();
                 startSound = new Audio('sounds/start-game.wav');
                 startSound.play();
             }
