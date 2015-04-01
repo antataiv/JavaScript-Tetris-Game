@@ -26,6 +26,7 @@ body {
 
 main {
     display: flex;
+    display: -webkit-box;
 }
 
 header {

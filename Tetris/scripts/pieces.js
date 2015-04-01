@@ -1,4 +1,4 @@
-function LPiece() {
+var LPiece = (function() {
     this.state1 = [ [1, 0],
                     [1, 0],
                     [1, 1]];
@@ -19,9 +19,9 @@ function LPiece() {
     //top left coordinates of piece
     this.x = 4;
     this.y = 0;
-}
+});
 
-function ReverseLPiece() {
+var ReverseLPiece = (function() {
     this.state1 = [ [0, 1],
                     [0, 1],
                     [1, 1]];
@@ -42,9 +42,9 @@ function ReverseLPiece() {
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
-}
+});
 
-function BlockPiece() {
+var BlockPiece = (function() {
     this.state1 = [ [1, 1],
                     [1, 1]];
 
@@ -54,9 +54,9 @@ function BlockPiece() {
     //top left coordinates of piece
     this.x = 4;
     this.y = 0;
-}
+});
 
-function LinePiece() {
+var LinePiece = (function() {
     this.state1 = [ [1],
                     [1],
                     [1],
@@ -70,9 +70,9 @@ function LinePiece() {
     //top left coordinates of piece
     this.x = 4;
     this.y = 0;
-}
+});
 
-function TPiece() {
+var TPiece = (function() {
     this.state1 = [ [1, 1, 1],
                     [0, 1, 0]];
 
@@ -93,9 +93,9 @@ function TPiece() {
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
-}
+});
 
-function ZPiece() {
+var ZPiece = (function() {
     this.state1 = [ [1, 1, 0],
                     [0, 1, 1]];
 
@@ -109,9 +109,9 @@ function ZPiece() {
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
-}
+});
 
-function ReverseZPiece() {
+var ReverseZPiece = (function() {
     this.state1 = [ [0, 1, 1],
                     [1, 1, 0]];
 
@@ -125,9 +125,9 @@ function ReverseZPiece() {
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
-}
+});
 
-function PlusPiece() {
+var PlusPiece = (function() {
     this.state1 = [ [0, 1, 0],
                     [1, 1, 1],
 					[0, 1, 0]];
@@ -138,9 +138,9 @@ function PlusPiece() {
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
-}
+});
 
-function SinglePiece() {
+var SinglePiece = (function() {
     this.state1 = [ [ 1] ];
 
     this.states = [this.state1];
@@ -149,7 +149,7 @@ function SinglePiece() {
     //top left coordinates of piece
     this.x = 3;
     this.y = 0;
-}
+});
 
 function getRandomPiece() {
     var result = Math.floor(Math.random() * 9);
