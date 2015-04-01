@@ -140,10 +140,20 @@ var PlusPiece = (function() {
     this.y = 0;
 });
 
-var SinglePiece = (function() {
-    this.state1 = [ [ 1] ];
+var LittleLPiece = (function() {
+    this.state1 = [ [ 1, 0],
+					[ 1, 1]];
 
-    this.states = [this.state1];
+	this.state2 = [ [ 0, 1],
+					[ 1, 1]];
+		
+	this.state3 = [ [ 1, 1],
+					[ 0, 1]];	
+					
+	this.state4 = [ [ 1, 1],
+					[ 1, 0]];				
+					
+    this.states = [this.state1, this.state2, this.state3, this.state4];
     this.currentState = 0;
     this.colorIndex = 2;
     //top left coordinates of piece
@@ -151,8 +161,45 @@ var SinglePiece = (function() {
     this.y = 0;
 });
 
+var ReversedLittleLPiece = (function() {
+    this.state1 = [ [ 0, 1],
+					[ 1, 1]];
+
+	this.state2 = [ [ 1, 1],
+					[ 0, 1]];
+		
+	this.state3 = [ [ 1, 1],
+					[ 1, 0]];	
+					
+	this.state4 = [ [ 1, 0],
+					[ 1, 1]];				
+					
+    this.states = [this.state1, this.state2, this.state3, this.state4];
+    this.currentState = 0;
+    this.colorIndex = 3;
+    //top left coordinates of piece
+    this.x = 3;
+    this.y = 0;
+});
+
+var WeirdPiece= (function() {
+    this.state1 = [ [ 1, 0],
+					[ 0, 1]];
+
+					
+	this.state2 = [ [ 0, 1],
+					[ 1, 0]];
+					
+    this.states = [this.state1, this.state2];
+    this.currentState = 0;
+    this.colorIndex = 4;
+    //top left coordinates of piece
+    this.x = 3;
+    this.y = 0;
+});
+
 function getRandomPiece() {
-    var result = Math.floor(Math.random() * 9);
+    var result = Math.floor(Math.random() * 11);
     var piece;
 
     switch (result) {
@@ -172,8 +219,12 @@ function getRandomPiece() {
             break;
 		case 7: piece = new PlusPiece();
 			break;
-		case 8: piece = new SinglePiece();
+		case 8: piece = new LittleLPiece();
 			break;
+		case 9: piece = new ReversedLittleLPiece();
+		break;
+		case 10: piece = new WeirdPiece();
+		break;
     }
     //piece.color = Math.floor(Math.random() * 8);
 
