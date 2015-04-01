@@ -25,8 +25,11 @@ body {
 }
 
 main {
-    display: flex;
-    display: -webkit-box;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
 header {
@@ -62,6 +65,7 @@ article, button {
 }
 
 button {
+	outline: none;
     border: none;
     border: 2px solid #6e6e7b;
     font-family: Xolonium, sans-serif;
