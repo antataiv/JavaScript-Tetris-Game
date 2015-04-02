@@ -139,6 +139,20 @@ function drawBoard() {
             break;
         case 3: ctx.drawImage(canvasBackgroundImages[2], 0, 0, 320, 640, 0, 0, 320, 640);
             break;
+        case 4: ctx.drawImage(canvasBackgroundImages[0], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 5: ctx.drawImage(canvasBackgroundImages[1], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 6: ctx.drawImage(canvasBackgroundImages[2], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 7: ctx.drawImage(canvasBackgroundImages[0], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 8: ctx.drawImage(canvasBackgroundImages[1], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 9: ctx.drawImage(canvasBackgroundImages[2], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
+        case 10: ctx.drawImage(canvasBackgroundImages[2], 0, 0, 320, 640, 0, 0, 320, 640);
+            break;
     }
 
     //redraw the already saved previous state of the game matrix
@@ -267,18 +281,75 @@ function checkIfLineIsFull() {
             curScore+=20;
 
             //change level and speed
-            if (curLines >= 3 && curLines<5){
-                newLevelSound = new Audio('sounds/new-level.wav');
-                newLevelSound.play();
-                curLevel = 2;
-                speedControl = 300;
-            }
+            //if (curLines >= 3 && curLines<5){
+            //    newLevelSound = new Audio('sounds/new-level.wav');
+            //    newLevelSound.play();
+            //    curLevel = 2;
+            //    speedControl = 300;
+            //}
+            //
+            //if (curLines >= 5){
+            //    newLevelSound = new Audio('sounds/new-level-1.wav');
+            //    newLevelSound.play();
+            //    curLevel = 3;
+            //    speedControl = 100;
+            //}
 
-            if (curLines >= 5){
-                newLevelSound = new Audio('sounds/new-level-1.wav');
-                newLevelSound.play();
-                curLevel = 3;
-                speedControl = 100;
+            switch(curLines) {
+                case 15:
+                    newLevelSound = new Audio('sounds/new-level.wav');
+                    newLevelSound.play();
+                    curLevel = 2;
+                    speedControl = 450;
+                    break;
+                case 30:
+                    newLevelSound = new Audio('sounds/new-level.wav');
+                    newLevelSound.play();
+                    curLevel = 3;
+                    speedControl = 400;
+                    break;
+                case 45:
+                    newLevelSound = new Audio('sounds/new-level.wav');
+                    newLevelSound.play();
+                    curLevel = 4;
+                    speedControl = 350;
+                    break;
+                case 60:
+                    newLevelSound = new Audio('sounds/new-level.wav');
+                    newLevelSound.play();
+                    curLevel = 5;
+                    speedControl = 300;
+                    break;
+                case 75:
+                    newLevelSound = new Audio('sounds/new-level.wav');
+                    newLevelSound.play();
+                    curLevel = 6;
+                    speedControl = 250;
+                    break;
+                case 90:
+                    newLevelSound = new Audio('sounds/new-level.wav');
+                    newLevelSound.play();
+                    curLevel = 7;
+                    speedControl = 200;
+                    break;
+                case 105:
+                    newLevelSound = new Audio('sounds/new-level-1.wav');
+                    newLevelSound.play();
+                    curLevel = 8;
+                    speedControl = 150;
+                    break;
+                case 120:
+                    newLevelSound = new Audio('sounds/new-level-1.wav');
+                    newLevelSound.play();
+                    curLevel = 9;
+                    speedControl = 100;
+                    break;
+                case 135:
+                    newLevelSound = new Audio('sounds/new-level-1.wav');
+                    newLevelSound.play();
+                    curLevel = 10;
+                    speedControl = 50;
+                    break;
             }
 
             //delete the current row
