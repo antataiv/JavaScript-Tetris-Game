@@ -414,7 +414,6 @@ function startScreen () {
         var hue = 0;
         var direction = 1;
         var transitioning = false;
-        var wasButtonDown = false;
 
         function centerText(ctx, text, y) {
             var measurement = ctx.measureText(text);
@@ -447,16 +446,14 @@ function startScreen () {
             if (hue < 0) direction = 1;
 
             var isButtonDown = input.isButtonDown();
-            var mouseJustClicked = !isButtonDown && wasButtonDown;
 
-            if (mouseJustClicked && !transitioning) {
+            if (isButtonDown && !transitioning) {
                 transitioning = true;
                 initializeGame();
                 startSound = new Audio('sounds/start-game.wav');
                 startSound.play();
             }
 
-            wasButtonDown = isButtonDown;
         }
 
         return {
