@@ -1,1 +1,2 @@
-JavaScript TeamWork - Tetris
+# JavaScript Tetris
+Software University JavaScript Teamwork Project.
